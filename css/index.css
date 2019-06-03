@@ -1,3 +1,469 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.container {
+  width: 880px;
+  /* TB LR */
+  margin: 0 auto;
+}
+
+/* header */
+
+header nav {
+  display: inline-block;
+  width: 691px;
+  vertical-align: top;
+  margin-top: 35px;
+}
+
+header nav a {
+  margin-right: 65px;
+  font-size: 14px;
+  color: gray;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header nav a:first-child {
+  margin-left: 0;
+}
+
+header nav a:last-child {
+  margin-right: 0;
+}
+
+header .logo {
+  margin-top: 25px;
+}
+/* Computer resolution */
+@media (max-width: 800px) {
+  .container{
+    width: 660px;
+    margin: 0 auto;
+  }
+  header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header nav {
+    text-align: center;
+  }
+  .cta {
+    text-align: center;
+  }
+  .cta img {
+    display: none;
+  }
+  .middle-img {
+    width: 700px;
+    height: auto;
+  }
+  .top-content {
+    display: flex;
+  }
+  .bottom-content {
+    display: flex;
+  }
+}
+
+/* Phone resolution */
+@media (max-width: 500px) {
+  .container {
+    width: 500px;
+    margin: 0 auto;
+  }
+   nav a{
+    color: white;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    width: 499px;
+    height: auto;
+  }
+  .top-content {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .text-content {
+    padding: 10px 0 10px 0;
+  }
+
+  .middle-img {
+    width: 499px;
+    height: auto;
+  }
+  .bottom-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* cta */
+
+.cta .cta-text {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 77px;
+  margin-top: 120px;
+  text-align: center;
+  padding: 0px 75px;
+}
+
+.cta .cta-text button {
+  background: white;
+  vertical-align: top;
+  margin-top: 6px;
+  padding: 8px 44px;
+  font-size: 17px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cta .cta-text button:hover {
+  background: black;
+  color: white;
+}
+
+.main-content {
+  border-top: 1px solid black;
+  margin-top: 76px;
+  padding-top: 39px;
+}
+
+.main-content .top-content {
+  padding: 0 10px;
+}
+
+.main-content .top-content .text-content {
+  width: 410px;
+  display: inline-block;
+  margin-right: 34px;
+}
+
+.main-content .top-content .text-content:last-child {
+  margin-right: 0;
+}
+
+.main-content .middle-img {
+  margin-top: 45px;
+}
+
+.main-content .bottom-content {
+  margin-top: 37px;
+  padding: 0 10px;
+}
+
+.main-content .bottom-content .text-content {
+  width: 275px;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.main-content .bottom-content .text-content:last-child {
+  margin-right: 0;
+}
+
+.contact {
+  margin-top: 57px;
+  border-top: 1px solid black;
+  padding: 39px 10px 0;
+}
+
+.contact p {
+  margin: 20px 0;
+}
+
+footer {
+  margin: 32px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+//services page
+.test {
+	display: flex;
+	flex-wrap: row wrap;
+}
+.container-pic {
+	margin: 40px 0px 20px 0px;
+}
+
+.container-para1{
+	margin: 40px 0px 40px 0px;
+}
+
+.digi-container{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column;
+	border: 2px solid solid black;
+	height: 220px;
+	width: 400px;
+	background-color: #e7e7e7;
+	margin: 0;
+}
+
+.digi-container button {
+	position: relative;
+	bottom: 7px;
+	left: 20px;
+	height: 30px;
+	width: 140px;
+	border-radius: 10px;
+	font-size: 10px;
+	background-color: white;
+}
+
+.digi-container h4 {
+	position: relative;
+  margin: 0;
+	left: 20px;
+	top: 10px;
+}
+
+.digi-container p {
+	margin: 0px 15px 0px 15px;
+}
+
+.ux-container{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column;
+	border: 2px solid black;
+	height: 220px;
+	width: 400px;
+	background-color: #e7e7e7;
+}
+.ux-container button {
+	position: relative;
+	bottom: 7px;
+	left: 20px;
+	height: 30px;
+	width: 140px;
+	border-radius: 10px;
+	font-size: 10px;
+	background-color: white;
+}
+.ux-container h4 {
+	position: relative;
+  margin: 0;
+	left: 20px;
+	top: 10px;
+}
+
+.ux-container p {
+	margin: 0px 15px 0px 15px;
+}
+.mar-container{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column;
+	border: 2px solid black;
+	height: 220px;
+	width: 400px;
+	background-color: #e7e7e7;
+}
+.mar-container button {
+	position: relative;
+	bottom: 7px;
+	left: 20px;
+	height: 30px;
+	width: 140px;
+	border-radius: 10px;
+	font-size: 10px;
+	background-color: white;
+}
+.mar-container h4 {
+	position: relative;
+  margin: 0;
+	left: 20px;
+	top: 10px;
+}
+
+.mar-container p {
+	margin: 0px 15px 0px 15px;
+}
+.web-container{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column;
+	border: 2px solid black;
+	height: 220px;
+	width: 400px;
+	background-color: #e7e7e7;
+}
+.web-container button {
+	position: relative;
+	bottom: 7px;
+	left: 20px;
+	height: 30px;
+	width: 140px;
+	border-radius: 10px;
+	font-size: 10px;
+	background-color: white;
+}
+.web-container h4 {
+	position: relative;
+  margin: 0;
+	left: 20px;
+	top: 10px;
+}
+
+.web-container p {
+	margin: 0px 15px 0px 15px;
+}
+.ios-container{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column;
+	border: 2px solid black;
+	height: 220px;
+	width: 400px;
+	background-color: #e7e7e7;
+}
+.ios-container button {
+	position: relative;
+	bottom: 7px;
+	left: 20px;
+	height: 30px;
+	width: 140px;
+	border-radius: 10px;
+	font-size: 10px;
+	background-color: white;
+}
+.ios-container h4 {
+	position: relative;
+  margin: 0;
+	left: 20px;
+	top: 10px;
+}
+
+.ios-container p {
+	margin: 0px 15px 0px 15px;
+}
+.andro-container{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column;
+	border: 2px solid black;
+	height: 220px;
+	width: 400px;
+	background-color: #e7e7e7;
+}
+.andro-container button {
+	position: relative;
+	bottom: 7px;
+	left: 20px;
+	height: 30px;
+	width: 140px;
+	border-radius: 10px;
+	font-size: 10px;
+	background-color: white;
+}
+.andro-container h4 {
+	position: relative;
+  margin: 0;
+	left: 20px;
+	top: 10px;
+}
+
+.andro-container p {
+	margin: 0px 15px 0px 15px;
+}
+
+.abv-footer {
+	display: flex;
+	margin: 40px 0px 80px 0px;
+}
+
+.serv-container {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.serv-container p {
+	position: relative;
+	bottom: 25px;
+  margin: 0px 60px 0px 0px;
+}
+
+ul {
+  list-style-type: square;
+}
+li {
+	list-style-position: inside;
+	position: relative;
+	bottom: 35px;
+	margin: 10px 0px;
+}
