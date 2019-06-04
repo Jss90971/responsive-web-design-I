@@ -123,7 +123,7 @@ header .logo {
     display: none;
   }
   .middle-img {
-    width: 700px;
+    width: 80%;
     height: auto;
   }
   .top-content {
@@ -139,6 +139,12 @@ header .logo {
   .container {
     width: 500px;
     margin: 0 auto;
+    overflow: auto;
+  }
+  header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
    nav a{
     color: white;
@@ -146,13 +152,12 @@ header .logo {
     display: flex;
     justify-content: center;
     border: 1px solid black;
-    width: 499px;
+    width: 500px;
     height: auto;
   }
   .top-content {
     display: flex;
     flex-direction: column;
-
   }
 
   .text-content {
@@ -160,7 +165,7 @@ header .logo {
   }
 
   .middle-img {
-    width: 499px;
+    width: 100%;
     height: auto;
   }
   .bottom-content {
